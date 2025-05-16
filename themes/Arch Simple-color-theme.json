@@ -1,0 +1,116 @@
+{
+  "name": "Arch Simple",          // Nome do tema
+  "type": "dark",                 // Define que o tema é escuro (modo escuro)
+
+  "colors": {
+    "editor.background": "#3a3a3a",                // 🎨 Cor de fundo principal do editor de código
+    "editor.foreground": "#ffffff",                // 📝 Cor padrão do texto (caso não tenha uma cor específica no tokenColors)
+    "editor.lineHighlightBackground": "#444444"    // 📌 Cor de fundo da linha atual/selecionada no editor
+  },
+
+  "tokenColors": [
+    {
+      "name": "Brackets and Braces",   // 🔣 Cores para delimitadores como {} [] () 
+      "scope": [
+        "punctuation.definition.block",      // Ex: chaves de bloco {}
+        "punctuation.definition.array",      // Ex: colchetes []
+        "punctuation.section.block",         // Blocos de código em geral
+        "meta.brace",                        // Metadados envolvendo chaves
+        "meta.brackets",                     // Metadados envolvendo colchetes
+        "punctuation.section.array.begin",   // Início de array
+        "punctuation.section.array.end",     // Fim de array
+        "punctuation.section.block.begin",   // Início de bloco
+        "punctuation.section.block.end"      // Fim de bloco
+      ],
+      "settings": {
+        "foreground": "#00ffff",       // 💙 Cor ciano vibrante para delimitadores
+        "fontStyle": ""            // Deixar a font em negrito ou normal
+      }
+    },
+    {
+      "name": "Function Names",        // 🔧 Cores para nomes e chamadas de funções
+      "scope": [
+        "entity.name.function",          // Nome da função declarada
+        "support.function",              // Funções auxiliares
+        "meta.function-call",            // Chamadas de função
+        "meta.function-call.identifier", // Identificadores em chamadas
+        "variable.function"              // Variáveis do tipo função
+      ],
+      "settings": {
+        "foreground": "#66ff99",       // 💚 Verde menta vibrante
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Import Statements",     // 📦 Instruções de importação de módulos/pacotes
+      "scope": [
+        "keyword.control.import",      // Palavras-chave de importação
+        "meta.import",                 // Metadados de importação
+        "support.module",              // Suporte a módulos
+        "variable.language.import",    // Variáveis de importação
+        "keyword.other.import",        // Importação alternativa
+        "keyword.other.package",       // Palavras-chave de pacotes
+        "meta.use"                     // Uso de pacotes/modulos
+      ],
+      "settings": {
+        "foreground": "#9c999e",       // 💜 Roxo escuro azulado
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Keywords",              // 🧠 Palavras-chave como if, else, return, class, etc.
+      "scope": [
+        "keyword",               // Palavras-chave em geral
+        "keyword.control",       // Palavras de controle de fluxo
+        "storage.type"           // Tipos de armazenamento (ex: `class`, `int`, `var`)
+      ],
+      "settings": {
+        "foreground": "#c792ea",       // 💜 Roxo magenta suave
+        "fontStyle": ""
+      }
+    },
+    {
+      "name": "Strings",               // 🧾 Textos entre aspas: "texto", 'texto', `texto`
+      "scope": [
+        "string",              // Strings comuns
+        "string.quoted",       // Strings entre aspas
+        "string.template"      // Templates (como em JS: `Olá ${nome}`)
+      ],
+      "settings": {
+        "foreground": "#e5ece3"        // 💚 Verde claro suave
+      }
+    },
+    {
+      "name": "Comments",             // 💬 Comentários de linha ou bloco
+      "scope": [
+        "comment",           // Comentário genérico
+        "comment.line",      // Comentário de linha (//)
+        "comment.block"      // Comentário de bloco (/* */)
+      ],
+      "settings": {
+        "foreground": "#999999",       // ⚪ Cinza claro para não competir com o código
+        "fontStyle": "italic"          // Itálico
+      }
+    },
+    {
+      "name": "Numbers & Constants",   // 🔢 Números e constantes
+      "scope": [
+        "constant.numeric",     // Números (ex: 123, 0.5)
+        "constant.language",    // Constantes da linguagem (ex: null, true, false)
+        "constant.character"    // Caracteres constantes
+      ],
+      "settings": {
+        "foreground": "#ffffff"        // 💚 Verde-limão vibrante
+      }
+    },
+    {
+      "name": "Default (everything else)",  // 🌐 Cor padrão para qualquer coisa não coberta nos escopos acima
+      "scope": [
+        "*"
+      ],
+      "settings": {
+        "foreground": "#e0e0e0"        // ⚪ Cinza muito claro para excelente legibilidade
+      }
+    }
+  ]
+}

@@ -9,6 +9,7 @@
   "categories": [
     "Themes"
   ],
+  "icon": "arch-simple.png",
   "contributes": {
     "themes": [
       {
@@ -22,5 +23,10 @@
     "type": "git",
     "url": "https://github.com/paulohenriquex/arch-simple.git"
   },
-  "publisher": "paulohenriquex"
+  "publisher": "paulohenriquex",
+  "__metadata": {
+    "installedTimestamp": 1747370133221,
+    "targetPlatform": "universal",
+    "size": 9161
+  }
 }

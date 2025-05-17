@@ -1,6 +1,7 @@
 # arch-simple README
 
 ## Working with Markdown
+Um tema escuro inspirado no Arch Linux com cores simples e suaves, em roxo e verde.
 
 You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
@@ -12,5 +13,7 @@ You can author your README using Visual Studio Code. Here are some useful editor
 
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+![Screenshot do tema](https://github.com/paulohenriquex/arch-simple/screenshot.png)
+
 
 **Enjoy!**

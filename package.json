@@ -2,13 +2,26 @@
   "name": "arch-simple",
   "displayName": "Arch Simple",
   "description": "Um tema inspirado no Arch Linux com cores simples.",
-  "version": "0.0.3",
+  "version": "0.1.0",
+  "publisher": "paulohenriquex",
   "engines": {
-    "vscode": "^1.100.0"
+    "vscode": "^1.85.0" 
   },
   "categories": [
     "Themes"
   ],
+  "keywords": [ 
+    "theme",
+    "dark theme",
+    "arch linux",
+    "simple theme",
+    "purple",
+    "green",
+    "arch",
+    "minimal",
+    "vscodium"
+  ],
+  "license": "MIT", 
   "icon": "arch-simple.png",
   "contributes": {
     "themes": [
@@ -22,11 +35,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/paulohenriquex/arch-simple.git"
-  },
-  "publisher": "paulohenriquex",
-  "__metadata": {
-    "installedTimestamp": 1747370133221,
-    "targetPlatform": "universal",
-    "size": 9161
   }
 }

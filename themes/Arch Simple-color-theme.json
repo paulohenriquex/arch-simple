@@ -1,116 +1,229 @@
 {
-  "name": "Arch Simple",          // Nome do tema
-  "type": "dark",                 // Define que o tema é escuro (modo escuro)
-
+  "name": "Arch simple", // <--- PONTO DE ATENÇÃO MENOR
+  "type": "dark",
   "colors": {
-    "editor.background": "#3a3a3a",                // 🎨 Cor de fundo principal do editor de código
-    "editor.foreground": "#ffffff",                // 📝 Cor padrão do texto (caso não tenha uma cor específica no tokenColors)
-    "editor.lineHighlightBackground": "#444444"    // 📌 Cor de fundo da linha atual/selecionada no editor
+    "editor.background": "#3a3a3a",
+    "editor.foreground": "#ffffff",
+    "editor.lineHighlightBackground": "#444444"
+    // Você pode adicionar muitas outras cores da UI do VSCodium aqui
+    // Consulte: https://code.visualstudio.com/api/references/theme-color
   },
-
   "tokenColors": [
+    // == Configurações Originais e Globais ==
     {
-      "name": "Brackets and Braces",   // 🔣 Cores para delimitadores como {} [] () 
-      "scope": [
-        "punctuation.definition.block",      // Ex: chaves de bloco {}
-        "punctuation.definition.array",      // Ex: colchetes []
-        "punctuation.section.block",         // Blocos de código em geral
-        "meta.brace",                        // Metadados envolvendo chaves
-        "meta.brackets",                     // Metadados envolvendo colchetes
-        "punctuation.section.array.begin",   // Início de array
-        "punctuation.section.array.end",     // Fim de array
-        "punctuation.section.block.begin",   // Início de bloco
-        "punctuation.section.block.end"      // Fim de bloco
-      ],
+      "name": "Default Text (Fallback)",
+      "scope": ["*"], // Este é um fallback muito genérico
       "settings": {
-        "foreground": "#00ffff",       // 💙 Cor ciano vibrante para delimitadores
-        "fontStyle": ""            // Deixar a font em negrito ou normal
+        "foreground": "#e0e0e0" // Cinza muito claro
       }
     },
     {
-      "name": "Function Names",        // 🔧 Cores para nomes e chamadas de funções
+      "name": "Comments",
       "scope": [
-        "entity.name.function",          // Nome da função declarada
-        "support.function",              // Funções auxiliares
-        "meta.function-call",            // Chamadas de função
-        "meta.function-call.identifier", // Identificadores em chamadas
-        "variable.function"              // Variáveis do tipo função
+        "comment",
+        "comment.line", // Comentário de linha (//, #)
+        "comment.block", // Comentário de bloco (/* */)
+        "comment.block.documentation" // Comentários de documentação
       ],
       "settings": {
-        "foreground": "#66ff99",       // 💚 Verde menta vibrante
-        "fontStyle": ""
+        "foreground": "#999999", // Cinza claro
+        "fontStyle": "italic"
       }
     },
     {
-      "name": "Import Statements",     // 📦 Instruções de importação de módulos/pacotes
+      "name": "Strings",
       "scope": [
-        "keyword.control.import",      // Palavras-chave de importação
-        "meta.import",                 // Metadados de importação
-        "support.module",              // Suporte a módulos
-        "variable.language.import",    // Variáveis de importação
-        "keyword.other.import",        // Importação alternativa
-        "keyword.other.package",       // Palavras-chave de pacotes
-        "meta.use"                     // Uso de pacotes/modulos
+        "string",
+        "string.quoted", // Strings com aspas simples ou duplas
+        "string.template", // Template strings (JS: `Olá ${nome}`)
+        "string.unquoted"
       ],
       "settings": {
-        "foreground": "#9c999e",       // 💜 Roxo escuro azulado
-        "fontStyle": ""
+        "foreground": "#e5ece3" // Verde claro suave
       }
     },
     {
-      "name": "Keywords",              // 🧠 Palavras-chave como if, else, return, class, etc.
+      "name": "Numbers and Language Constants (Booleans, Null)",
       "scope": [
-        "keyword",               // Palavras-chave em geral
-        "keyword.control",       // Palavras de controle de fluxo
-        "storage.type"           // Tipos de armazenamento (ex: `class`, `int`, `var`)
+        "constant.numeric", // Números (123, 0.5)
+        "constant.language", // true, false, null, etc.
+        "constant.language.boolean"
       ],
       "settings": {
-        "foreground": "#c792ea",       // 💜 Roxo magenta suave
-        "fontStyle": ""
+        // No seu JSON original, a cor é #ffffff (branco).
+        // Seu comentário indicava "Verde-limão vibrante".
+        // Ajuste se desejar: ex, para #AEFF00 ou #7FFF00.
+        "foreground": "#ffffff"
       }
     },
     {
-      "name": "Strings",               // 🧾 Textos entre aspas: "texto", 'texto', `texto`
+      "name": "Keywords and Storage Types",
       "scope": [
-        "string",              // Strings comuns
-        "string.quoted",       // Strings entre aspas
-        "string.template"      // Templates (como em JS: `Olá ${nome}`)
+        "keyword", // Palavras-chave gerais (if, else, for, while)
+        "keyword.control", // Palavras-chave de controle de fluxo
+        "storage", // function, class, var, let, const
+        "storage.type", // int, string, boolean
+        "storage.modifier" // public, private, static
       ],
       "settings": {
-        "foreground": "#e5ece3"        // 💚 Verde claro suave
+        "foreground": "#c792ea" // Roxo magenta suave
       }
     },
     {
-      "name": "Comments",             // 💬 Comentários de linha ou bloco
+      "name": "Functions and Methods (Names & Calls)",
       "scope": [
-        "comment",           // Comentário genérico
-        "comment.line",      // Comentário de linha (//)
-        "comment.block"      // Comentário de bloco (/* */)
+        "entity.name.function", // Nome da função na declaração
+        "support.function", // Funções da linguagem/biblioteca (print, console.log)
+        "meta.function-call", // Chamada de função
+        "meta.function-call entity.name.function", // Nome da função na chamada
+        "variable.function" // Variáveis que são funções
       ],
       "settings": {
-        "foreground": "#999999",       // ⚪ Cinza claro para não competir com o código
-        "fontStyle": "italic"          // Itálico
+        "foreground": "#66ff99" // Verde menta vibrante
       }
     },
     {
-      "name": "Numbers & Constants",   // 🔢 Números e constantes
+      "name": "Brackets, Braces, and Punctuation",
       "scope": [
-        "constant.numeric",     // Números (ex: 123, 0.5)
-        "constant.language",    // Constantes da linguagem (ex: null, true, false)
-        "constant.character"    // Caracteres constantes
+        "punctuation", // Pontuação geral
+        "meta.brace", // Chaves {}
+        "meta.brackets", // Colchetes []
+        "meta.paren", // Parênteses ()
+        "punctuation.definition.block",
+        "punctuation.definition.array",
+        "punctuation.section.block",
+        "punctuation.section.array.begin",
+        "punctuation.section.array.end",
+        "punctuation.section.block.begin",
+        "punctuation.section.block.end",
+        "punctuation.terminator", // Ponto e vírgula, vírgulas
+        "punctuation.separator"
       ],
       "settings": {
-        "foreground": "#ffffff"        // 💚 Verde-limão vibrante
+        "foreground": "#00ffff" // Ciano vibrante
       }
     },
     {
-      "name": "Default (everything else)",  // 🌐 Cor padrão para qualquer coisa não coberta nos escopos acima
+      "name": "Import Statements & Modules (General)",
       "scope": [
-        "*"
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.control.from",
+        "meta.import",
+        "support.module",
+        "variable.language.import",
+        "keyword.other.import",
+        "keyword.other.package"
       ],
       "settings": {
-        "foreground": "#e0e0e0"        // ⚪ Cinza muito claro para excelente legibilidade
+        "foreground": "#9c999e" // Cinza/Roxo escuro azulado
+      }
+    },
+
+    // == HTML Specific ==
+    {
+      "name": "HTML: Tags",
+      "scope": [
+        "entity.name.tag.html",
+        "meta.tag.structure.any.html entity.name.tag.html", // Para tags como DOCTYPE
+        "meta.tag.metadata.doctype.html entity.name.tag.html"
+      ],
+      "settings": {
+        "foreground": "#9c999e" // Usando a cor de "Import Statements" para tags
+      }
+    },
+    {
+      "name": "HTML: Attribute Names",
+      "scope": ["entity.other.attribute-name.html"],
+      "settings": {
+        "foreground": "#c792ea" // Usando a cor de "Keywords"
+      }
+    },
+    {
+      "name": "HTML: Punctuation for Tags (<, >, /)",
+      "scope": [
+        "punctuation.definition.tag.begin.html",
+        "punctuation.definition.tag.end.html"
+      ],
+      "settings": {
+        "foreground": "#00ffff" // Usando a cor de "Brackets"
+      }
+    },
+    // Strings em HTML já devem ser cobertas pela regra global "Strings"
+    // Comentários HTML já devem ser cobertos pela regra global "Comments"
+
+    // == CSS Specific ==
+    {
+      "name": "CSS: Selectors (Tags, Classes, IDs, Pseudo-classes)",
+      "scope": [
+        "entity.name.tag.css", // Seletor de tag (body, h1)
+        "entity.other.attribute-name.class.css", // Seletor de classe (.minha-classe)
+        "entity.other.attribute-name.id.css", // Seletor de ID (#meu-id)
+        "entity.name.pseudo-class.css", // Pseudo-classes (:hover)
+        "entity.name.pseudo-element.css" // Pseudo-elementos (::before)
+      ],
+      "settings": {
+        "foreground": "#66ff99" // Usando a cor de "Function Names"
+      }
+    },
+    {
+      "name": "CSS: Property Names",
+      "scope": ["support.type.property-name.css"],
+      "settings": {
+        "foreground": "#c792ea" // Usando a cor de "Keywords"
+      }
+    },
+    {
+      "name": "CSS: Property Values (Keywords, Units, some Colors)",
+      "scope": [
+        "support.constant.property-value.css", // Palavras-chave de valor (none, auto, block)
+        "keyword.other.unit.css" // Unidades (px, em, %)
+        // Cores como 'red', 'blue' podem cair aqui ou em support.constant.color
+      ],
+      "settings": {
+        "foreground": "#ffffff" // Usando a cor de "Numbers & Constants"
+        // Se #ffffff for branco, considere usar outra cor daqui ou uma nova
+      }
+    },
+    {
+      "name": "CSS: At-Rules (@media, @import, @font-face)",
+      "scope": [
+        "keyword.control.at-rule.css",
+        "punctuation.definition.keyword.css" // O '@' em si
+      ],
+      "settings": {
+        "foreground": "#9c999e", // Usando a cor de "Import Statements"
+        "fontStyle": "italic"
+      }
+    },
+    // Strings em CSS (ex: `content: "Olá";`, `font-family: "Arial";`) já são cobertas pela regra global "Strings"
+    // Números em CSS (ex: `opacity: 0.5;`) já são cobertos pela regra "Numbers and Language Constants"
+    // Cores hex (#RRGGBB) podem precisar de escopos específicos como "constant.other.color.rgb-value.hex.css"
+    // Comentários CSS já devem ser cobertos pela regra global "Comments"
+
+    // == JSON Specific ==
+    {
+      "name": "JSON: Property Keys (Names)",
+      "scope": ["support.type.property-name.json"],
+      "settings": {
+        "foreground": "#c792ea" // Usando a cor de "Keywords"
+      }
+    },
+    {
+      "name": "JSON: Structural Punctuation",
+      "scope": [
+        "punctuation.definition.dictionary.begin.json",
+        "punctuation.definition.dictionary.end.json",
+        "punctuation.definition.array.begin.json",
+        "punctuation.definition.array.end.json",
+        "punctuation.separator.dictionary.key-value.json", // :
+        "punctuation.separator.dictionary.pair.json" // ,
+      ],
+      "settings": {
+        "foreground": "#00ffff" // Usando a cor de "Brackets"
       }
     }
+    // Strings, Números, Booleans e Null em JSON já devem ser cobertos pelas regras globais.
+    // JSON não tem comentários por padrão.
   ]
 }

@@ -2,7 +2,7 @@
   "name": "arch-simple",
   "displayName": "Arch Simple",
   "description": "Um tema inspirado no Arch Linux com cores simples.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "publisher": "paulohenriquex",
   "engines": {
     "vscode": "^1.85.0" 

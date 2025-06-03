@@ -1,229 +1,164 @@
 {
-  "name": "Arch simple", // <--- PONTO DE ATENÇÃO MENOR
+  "name": "Arch Simple",
   "type": "dark",
   "colors": {
-    "editor.background": "#3a3a3a",
+    "editor.background": "#282A36",
     "editor.foreground": "#ffffff",
     "editor.lineHighlightBackground": "#444444"
-    // Você pode adicionar muitas outras cores da UI do VSCodium aqui
-    // Consulte: https://code.visualstudio.com/api/references/theme-color
   },
   "tokenColors": [
-    // == Configurações Originais e Globais ==
     {
       "name": "Default Text (Fallback)",
-      "scope": ["*"], // Este é um fallback muito genérico
-      "settings": {
-        "foreground": "#e0e0e0" // Cinza muito claro
-      }
+      "scope": ["*"],
+      "settings": { "foreground": "#e0e0e0" }
     },
     {
       "name": "Comments",
-      "scope": [
-        "comment",
-        "comment.line", // Comentário de linha (//, #)
-        "comment.block", // Comentário de bloco (/* */)
-        "comment.block.documentation" // Comentários de documentação
-      ],
-      "settings": {
-        "foreground": "#999999", // Cinza claro
-        "fontStyle": "italic"
-      }
+      "scope": ["comment", "comment.line", "comment.block", "comment.block.documentation"],
+      "settings": { "foreground": "#999999", "fontStyle": "italic" }
     },
     {
       "name": "Strings",
-      "scope": [
-        "string",
-        "string.quoted", // Strings com aspas simples ou duplas
-        "string.template", // Template strings (JS: `Olá ${nome}`)
-        "string.unquoted"
-      ],
-      "settings": {
-        "foreground": "#e5ece3" // Verde claro suave
-      }
+      "scope": ["string", "string.quoted", "string.template", "string.unquoted"],
+      "settings": { "foreground": "#e5ece3" }
     },
     {
       "name": "Numbers and Language Constants (Booleans, Null)",
-      "scope": [
-        "constant.numeric", // Números (123, 0.5)
-        "constant.language", // true, false, null, etc.
-        "constant.language.boolean"
-      ],
-      "settings": {
-        // No seu JSON original, a cor é #ffffff (branco).
-        // Seu comentário indicava "Verde-limão vibrante".
-        // Ajuste se desejar: ex, para #AEFF00 ou #7FFF00.
-        "foreground": "#ffffff"
-      }
+      "scope": ["constant.numeric", "constant.language", "constant.language.boolean"],
+      "settings": { "foreground": "#ffffff" }
     },
     {
       "name": "Keywords and Storage Types",
       "scope": [
-        "keyword", // Palavras-chave gerais (if, else, for, while)
-        "keyword.control", // Palavras-chave de controle de fluxo
-        "storage", // function, class, var, let, const
-        "storage.type", // int, string, boolean
-        "storage.modifier" // public, private, static
+        "keyword", "keyword.control", "storage",
+        "storage.type", "storage.modifier" 
       ],
-      "settings": {
-        "foreground": "#c792ea" // Roxo magenta suave
-      }
+      "settings": { "foreground": "#d0f7c5" }
     },
     {
       "name": "Functions and Methods (Names & Calls)",
       "scope": [
-        "entity.name.function", // Nome da função na declaração
-        "support.function", // Funções da linguagem/biblioteca (print, console.log)
-        "meta.function-call", // Chamada de função
-        "meta.function-call entity.name.function", // Nome da função na chamada
-        "variable.function" // Variáveis que são funções
+        "entity.name.function", "support.function", "meta.function-call",
+        "meta.function-call entity.name.function", "variable.function"
+      ],
+      "settings": { "foreground": "#FF79C6" }
+    },
+    {
+      "name": "Parentheses ()",
+      "scope": [
+        "meta.paren.js",
+        "punctuation.parenthesis"
       ],
       "settings": {
-        "foreground": "#66ff99" // Verde menta vibrante
+        "foreground": "#ffd700"
       }
     },
     {
-      "name": "Brackets, Braces, and Punctuation",
+      "name": "Square Brackets []",
       "scope": [
-        "punctuation", // Pontuação geral
-        "meta.brace", // Chaves {}
-        "meta.brackets", // Colchetes []
-        "meta.paren", // Parênteses ()
-        "punctuation.definition.block",
+        "meta.brackets",
         "punctuation.definition.array",
-        "punctuation.section.block",
         "punctuation.section.array.begin",
-        "punctuation.section.array.end",
-        "punctuation.section.block.begin",
-        "punctuation.section.block.end",
-        "punctuation.terminator", // Ponto e vírgula, vírgulas
-        "punctuation.separator"
+        "punctuation.section.array.end"
       ],
       "settings": {
-        "foreground": "#00ffff" // Ciano vibrante
+        "foreground": "#87ceeb"
       }
     },
     {
-      "name": "Import Statements & Modules (General)",
+      "name": "Curly Braces {}",
       "scope": [
-        "keyword.control.import",
-        "keyword.control.export",
-        "keyword.control.from",
-        "meta.import",
-        "support.module",
-        "variable.language.import",
-        "keyword.other.import",
-        "keyword.other.package"
+        "meta.brace",
+        "punctuation.section.block",
+        "punctuation.definition.block"
       ],
       "settings": {
-        "foreground": "#9c999e" // Cinza/Roxo escuro azulado
+        "foreground": "#98fb98"
+      }
+    },
+    {
+      "name": "Other Punctuation (commas, terminators)",
+      "scope": [
+        "punctuation.terminator",
+        "punctuation.separator",
+        "punctuation.accessor"
+      ],
+      "settings": {
+        "foreground": "#f9ec77" //999999
+      }
+    },
+    {
+      "name": "Import Statements & Modules (Entire Line)",
+      "scope": [
+        "keyword.control.import", "keyword.control.export", "keyword.control.from",
+        "keyword.other.import", "keyword.other.package", "meta.import",
+        "storage.modifier.import.java", "meta.import storage.type",
+        "meta.import entity.name.type", "meta.import variable.other.object",
+        "meta.import punctuation.accessor", "meta.import punctuation.terminator",
+        "storage.type.import"
+      ],
+      "settings": {
+        "foreground": "#B5B5B5"
       }
     },
 
     // == HTML Specific ==
     {
       "name": "HTML: Tags",
-      "scope": [
-        "entity.name.tag.html",
-        "meta.tag.structure.any.html entity.name.tag.html", // Para tags como DOCTYPE
-        "meta.tag.metadata.doctype.html entity.name.tag.html"
-      ],
-      "settings": {
-        "foreground": "#9c999e" // Usando a cor de "Import Statements" para tags
-      }
+      "scope": ["entity.name.tag.html", "meta.tag.structure.any.html entity.name.tag.html", "meta.tag.metadata.doctype.html entity.name.tag.html"],
+      "settings": { "foreground": "#9c999e" }
     },
     {
       "name": "HTML: Attribute Names",
       "scope": ["entity.other.attribute-name.html"],
-      "settings": {
-        "foreground": "#c792ea" // Usando a cor de "Keywords"
-      }
+      "settings": { "foreground": "#c792ea" }
     },
     {
       "name": "HTML: Punctuation for Tags (<, >, /)",
-      "scope": [
-        "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html"
-      ],
-      "settings": {
-        "foreground": "#00ffff" // Usando a cor de "Brackets"
-      }
+      "scope": ["punctuation.definition.tag.begin.html", "punctuation.definition.tag.end.html"],
+      "settings": { "foreground": "#00ffff" }
     },
-    // Strings em HTML já devem ser cobertas pela regra global "Strings"
-    // Comentários HTML já devem ser cobertos pela regra global "Comments"
 
     // == CSS Specific ==
     {
       "name": "CSS: Selectors (Tags, Classes, IDs, Pseudo-classes)",
       "scope": [
-        "entity.name.tag.css", // Seletor de tag (body, h1)
-        "entity.other.attribute-name.class.css", // Seletor de classe (.minha-classe)
-        "entity.other.attribute-name.id.css", // Seletor de ID (#meu-id)
-        "entity.name.pseudo-class.css", // Pseudo-classes (:hover)
-        "entity.name.pseudo-element.css" // Pseudo-elementos (::before)
+        "entity.name.tag.css", "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css", "entity.name.pseudo-class.css",
+        "entity.name.pseudo-element.css"
       ],
-      "settings": {
-        "foreground": "#66ff99" // Usando a cor de "Function Names"
-      }
+      "settings": { "foreground": "#66ff99" }
     },
     {
       "name": "CSS: Property Names",
       "scope": ["support.type.property-name.css"],
-      "settings": {
-        "foreground": "#c792ea" // Usando a cor de "Keywords"
-      }
+      "settings": { "foreground": "#c792ea" }
     },
     {
       "name": "CSS: Property Values (Keywords, Units, some Colors)",
-      "scope": [
-        "support.constant.property-value.css", // Palavras-chave de valor (none, auto, block)
-        "keyword.other.unit.css" // Unidades (px, em, %)
-        // Cores como 'red', 'blue' podem cair aqui ou em support.constant.color
-      ],
-      "settings": {
-        "foreground": "#ffffff" // Usando a cor de "Numbers & Constants"
-        // Se #ffffff for branco, considere usar outra cor daqui ou uma nova
-      }
+      "scope": ["support.constant.property-value.css", "keyword.other.unit.css"],
+      "settings": { "foreground": "#ffffff" }
     },
     {
       "name": "CSS: At-Rules (@media, @import, @font-face)",
-      "scope": [
-        "keyword.control.at-rule.css",
-        "punctuation.definition.keyword.css" // O '@' em si
-      ],
-      "settings": {
-        "foreground": "#9c999e", // Usando a cor de "Import Statements"
-        "fontStyle": "italic"
-      }
+      "scope": ["keyword.control.at-rule.css", "punctuation.definition.keyword.css"],
+      "settings": { "foreground": "#9c999e", "fontStyle": "italic" }
     },
-    // Strings em CSS (ex: `content: "Olá";`, `font-family: "Arial";`) já são cobertas pela regra global "Strings"
-    // Números em CSS (ex: `opacity: 0.5;`) já são cobertos pela regra "Numbers and Language Constants"
-    // Cores hex (#RRGGBB) podem precisar de escopos específicos como "constant.other.color.rgb-value.hex.css"
-    // Comentários CSS já devem ser cobertos pela regra global "Comments"
 
     // == JSON Specific ==
     {
       "name": "JSON: Property Keys (Names)",
       "scope": ["support.type.property-name.json"],
-      "settings": {
-        "foreground": "#c792ea" // Usando a cor de "Keywords"
-      }
+      "settings": { "foreground": "#c792ea" }
     },
     {
       "name": "JSON: Structural Punctuation",
       "scope": [
-        "punctuation.definition.dictionary.begin.json",
-        "punctuation.definition.dictionary.end.json",
-        "punctuation.definition.array.begin.json",
-        "punctuation.definition.array.end.json",
-        "punctuation.separator.dictionary.key-value.json", // :
-        "punctuation.separator.dictionary.pair.json" // ,
+        "punctuation.definition.dictionary.begin.json", "punctuation.definition.dictionary.end.json",
+        "punctuation.definition.array.begin.json", "punctuation.definition.array.end.json",
+        "punctuation.separator.dictionary.key-value.json", "punctuation.separator.dictionary.pair.json"
       ],
-      "settings": {
-        "foreground": "#00ffff" // Usando a cor de "Brackets"
-      }
+      "settings": { "foreground": "#00ffff" }
     }
-    // Strings, Números, Booleans e Null em JSON já devem ser cobertos pelas regras globais.
-    // JSON não tem comentários por padrão.
   ]
 }

@@ -1,7 +1,7 @@
 # arch-simple README
 
 ## Sobre o Tema
-Um tema escuro inspirado no Arch Linux com cores simples e suaves, em roxo e verde.
+Um tema escuro inspirado no Arch Linux com cores simples e suaves.
 
 ## Atalhos úteis para editar Markdown
 - Dividir editor (`Ctrl+\` no Windows/Linux, `Cmd+\` no macOS)

@@ -33,7 +33,7 @@
         "keyword", "keyword.control", "storage",
         "storage.type", "storage.modifier" 
       ],
-      "settings": { "foreground": "#d0f7c5" }
+      "settings": { "foreground": "#94dc9c" }
     },
     {
       "name": "Functions and Methods (Names & Calls)",
@@ -41,7 +41,7 @@
         "entity.name.function", "support.function", "meta.function-call",
         "meta.function-call entity.name.function", "variable.function"
       ],
-      "settings": { "foreground": "#FF79C6" }
+      "settings": { "foreground": "#fba3aa" }
     },
     {
       "name": "Parentheses ()",

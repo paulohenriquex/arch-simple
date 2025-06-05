@@ -14,5 +14,5 @@ Um tema escuro inspirado no Arch Linux com cores simples e suaves.
 
 ![Preview do tema](./screenshot.png)
 
-**Aproveite!**
+**Aproveite o tema**
 

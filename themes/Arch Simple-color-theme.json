@@ -80,7 +80,7 @@
       "settings": { "foreground": "#f8f7f3" }
     },
     {
-      "name": "Import Statements & Modules",
+      "name": "Import Statements & Modules (Generic - Gray)",
       "scope": ["meta.import", "keyword.control.import", "keyword.control.export", "keyword.control.from"],
       "settings": { "foreground": "#B5B5B5" }
     },
@@ -122,6 +122,21 @@
       "name": "JSON: Key-Value Separator",
       "scope": ["punctuation.separator.dictionary.key-value.json"],
       "settings": { "foreground": "#fa7c9a" }
+    },
+
+    // == Java Specific (Imports/Annotations) ==
+    {
+      "name": "Java: Imports, Packages, and Annotations (White)",
+      "scope": [
+        "source.java keyword.other.package",
+        "source.java storage.modifier.package",
+        "source.java keyword.other.import",
+        "source.java storage.modifier.import",
+        "source.java storage.type.annotation"
+      ],
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
     },
 
     // == Markdown Specific ==

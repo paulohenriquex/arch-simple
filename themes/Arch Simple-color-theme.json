@@ -4,7 +4,21 @@
   "colors": {
     "editor.background": "#1e1e2e",
     "editor.foreground": "#f8f7f2",
-    "editor.lineHighlightBackground": "#484848"
+    "editor.lineHighlightBackground": "#3b2a4969",
+    "activityBar.background": "#1e1e2e",
+    "sideBar.background": "#1e1e2e",
+    "sideBarSectionHeader.background": "#1e1e2e",
+    "panel.background": "#1e1e2e",
+    "statusBar.background": "#1e1e2e",
+    "statusBar.noFolderBackground": "#1e1e2e",
+    "titleBar.activeBackground": "#1e1e2e",
+    "titleBar.inactiveBackground": "#1e1e2e",
+    "editorGroupHeader.tabsBackground": "#1e1e2e",
+    "tab.inactiveBackground": "#1e1e2e",
+    "tab.activeBackground": "#1e1e2e",
+    "breadcrumb.background": "#1e1e2e",
+    "editorLineNumber.foreground": "#999999",
+    "editorLineNumber.activeForeground": "#fa7c9a"
   },
   "tokenColors": [
     {

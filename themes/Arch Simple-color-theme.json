@@ -2,9 +2,12 @@
   "name": "Arch Simple",
   "type": "dark",
   "colors": {
+    // == Fundo e texto (paleta original) ==
     "editor.background": "#1e1e2e",
     "editor.foreground": "#f8f7f2",
     "editor.lineHighlightBackground": "#3b2a4969",
+    "editorCursor.foreground": "#fa7c9a",
+    "editorWhitespace.foreground": "#3b3b5280",
     "activityBar.background": "#1e1e2e",
     "sideBar.background": "#1e1e2e",
     "sideBarSectionHeader.background": "#1e1e2e",
@@ -16,9 +19,128 @@
     "editorGroupHeader.tabsBackground": "#1e1e2e",
     "tab.inactiveBackground": "#1e1e2e",
     "tab.activeBackground": "#1e1e2e",
+    "tab.activeForeground": "#f8f7f2",
+    "tab.inactiveForeground": "#999999",
     "breadcrumb.background": "#1e1e2e",
     "editorLineNumber.foreground": "#999999",
-    "editorLineNumber.activeForeground": "#fa7c9a"
+    "editorLineNumber.activeForeground": "#fa7c9a",
+
+    // == Seleção e busca (neutros, sem azul padrão) ==
+    // Tons claros o bastante para se destacarem do fundo #1e1e2e.
+    "editor.selectionBackground": "#5c5c85cc",
+    "editor.inactiveSelectionBackground": "#5c5c8599",
+    "editor.selectionHighlightBackground": "#5c5c8573",
+    "editor.selectionHighlightBorder": "#8a8ab3",
+    "editor.wordHighlightBackground": "#5c5c8599",
+    "editor.wordHighlightBorder": "#8a8ab366",
+    "editor.wordHighlightStrongBackground": "#5c5c85cc",
+    "editor.wordHighlightStrongBorder": "#8a8ab399",
+    "editor.findMatchBackground": "#8a8ab399",
+    "editor.findMatchBorder": "#c8c8e6",
+    "editor.findMatchHighlightBackground": "#5c5c8580",
+    "editor.findRangeHighlightBackground": "#4a4a6b66",
+    "editor.hoverHighlightBackground": "#5c5c8566",
+
+    // == Widgets: autocomplete, hover, peek ==
+    "editorSuggestWidget.background": "#2a2a3c",
+    "editorSuggestWidget.border": "#3b3b52",
+    "editorSuggestWidget.foreground": "#f8f7f2",
+    "editorSuggestWidget.selectedBackground": "#3b3b52",
+    "editorSuggestWidget.highlightForeground": "#69ffb4",
+    "editorHoverWidget.background": "#2a2a3c",
+    "editorHoverWidget.border": "#3b3b52",
+    "editorWidget.background": "#2a2a3c",
+    "editorWidget.border": "#3b3b52",
+    "peekView.border": "#3b3b52",
+    "peekViewEditor.background": "#1e1e2e",
+    "peekViewEditorGutter.background": "#1e1e2e",
+    "peekViewResult.background": "#2a2a3c",
+    "peekViewResult.selectionBackground": "#3b3b52",
+
+    // == Inputs, dropdowns, botões ==
+    "input.background": "#2a2a3c",
+    "input.foreground": "#f8f7f2",
+    "input.border": "#3b3b52",
+    "input.placeholderForeground": "#999999",
+    "dropdown.background": "#2a2a3c",
+    "dropdown.foreground": "#f8f7f2",
+    "dropdown.border": "#3b3b52",
+    "checkbox.background": "#2a2a3c",
+    "checkbox.border": "#3b3b52",
+    "button.background": "#3b3b52",
+    "button.foreground": "#f8f7f2",
+    "button.hoverBackground": "#45455f",
+
+    // == Listas (explorer, sugestões) ==
+    "list.hoverBackground": "#2a2a3c",
+    "list.activeSelectionBackground": "#3b3b52",
+    "list.activeSelectionForeground": "#f8f7f2",
+    "list.inactiveSelectionBackground": "#2a2a3c",
+    "list.inactiveSelectionForeground": "#f8f7f2",
+    "list.focusBackground": "#2a2a3c",
+    "list.focusForeground": "#f8f7f2",
+    "list.highlightForeground": "#69ffb4",
+    "listFilterWidget.background": "#2a2a3c",
+
+    // == Menus de contexto ==
+    "menu.background": "#2a2a3c",
+    "menu.foreground": "#f8f7f2",
+    "menu.selectionBackground": "#3b3b52",
+    "menu.selectionForeground": "#f8f7f2",
+    "menu.separatorBackground": "#3b3b52",
+
+    // == Badges e notificações ==
+    "badge.background": "#3b3b52",
+    "badge.foreground": "#f8f7f2",
+    "activityBarBadge.background": "#fa7c9a",
+    "activityBarBadge.foreground": "#1e1e2e",
+    "notificationCenterHeader.background": "#2a2a3c",
+    "notifications.background": "#2a2a3c",
+    "notificationToast.background": "#2a2a3c",
+
+    // == Scrollbar e foco ==
+    "scrollbarSlider.background": "#3b3b5280",
+    "scrollbarSlider.hoverBackground": "#3b3b52b3",
+    "scrollbarSlider.activeBackground": "#45455fb3",
+    "focusBorder": "#3b3b52",
+
+    // == Diff editor (tons suaves da paleta) ==
+    "diffEditor.insertedTextBackground": "#69ffb433",
+    "diffEditor.removedTextBackground": "#fa7c9a33",
+    "diffEditor.insertedLineBackground": "#69ffb41a",
+    "diffEditor.removedLineBackground": "#fa7c9a1a",
+
+    // == Git: gutter e explorer (discreto, cores do tema) ==
+    "editorGutter.addedBackground": "#69ffb4",
+    "editorGutter.modifiedBackground": "#f8f2a0",
+    "editorGutter.deletedBackground": "#fa7c9a",
+    "gitDecoration.addedResourceForeground": "#69ffb4",
+    "gitDecoration.modifiedResourceForeground": "#f8f2a0",
+    "gitDecoration.deletedResourceForeground": "#fa7c9a",
+    "gitDecoration.untrackedResourceForeground": "#87ceeb",
+    "gitDecoration.ignoredResourceForeground": "#999999",
+    "gitDecoration.conflictingResourceForeground": "#bf00ff",
+
+    // == Terminal (16 cores ANSI discretas) ==
+    "terminal.background": "#1e1e2e",
+    "terminal.foreground": "#f8f7f2",
+    "terminalCursor.foreground": "#fa7c9a",
+    "terminal.ansiBlack": "#1e1e2e",
+    "terminal.ansiRed": "#f28fad",
+    "terminal.ansiGreen": "#69ffb4",
+    "terminal.ansiYellow": "#f8f2a0",
+    "terminal.ansiBlue": "#87ceeb",
+    "terminal.ansiMagenta": "#d5a0e8",
+    "terminal.ansiCyan": "#7fd6c9",
+    "terminal.ansiWhite": "#f8f7f2",
+    "terminal.ansiBrightBlack": "#B5B5B5",
+    "terminal.ansiBrightRed": "#fa7c9a",
+    "terminal.ansiBrightGreen": "#8affc9",
+    "terminal.ansiBrightYellow": "#faf5b8",
+    "terminal.ansiBrightBlue": "#a0dcf5",
+    "terminal.ansiBrightMagenta": "#e0b8f0",
+    "terminal.ansiBrightCyan": "#9ce8dd",
+    "terminal.ansiBrightWhite": "#ffffff"
   },
   "tokenColors": [
     {

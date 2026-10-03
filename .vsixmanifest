@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 		<Metadata>
-			<Identity Language="en-US" Id="arch-simple" Version="0.0.1" Publisher="paulohenriquex" />
+			<Identity Language="en-US" Id="arch-simple" Version="1.0.15" Publisher="paulohenriquex" />
 			<DisplayName>Arch Simple</DisplayName>
 			<Description xml:space="preserve">Um tema inspirado no Arch Linux com cores simples.</Description>
-			<Tags>theme,color-theme,__web_extension</Tags>
+			<Tags>theme,dark theme,arch linux,simple theme,purple,green,arch,minimal,vscodium,color-theme,__web_extension</Tags>
 			<Categories>Themes</Categories>
 			<GalleryFlags>Public</GalleryFlags>
 			
 			<Properties>
-				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.100.0" />
+				<Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.85.0" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
 				<Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="ui,workspace,web" />
@@ -18,11 +18,9 @@
 				
 				
 				
-				<Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/paulohenriquex/arch-simple.git" />
-				<Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/paulohenriquex/arch-simple.git" />
-				<Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/paulohenriquex/arch-simple.git" />
-				<Property Id="Microsoft.VisualStudio.Services.Links.Support" Value="https://github.com/paulohenriquex/arch-simple/issues" />
-				<Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/paulohenriquex/arch-simple#readme" />
+				
+				
+				
 				
 				
 				<Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
@@ -32,7 +30,7 @@
 				
 			</Properties>
 			<License>extension/LICENSE.txt</License>
-			
+			<Icon>extension/arch-simple.png</Icon>
 		</Metadata>
 		<Installation>
 			<InstallationTarget Id="Microsoft.VisualStudio.Code"/>
@@ -43,5 +41,6 @@
 			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/readme.md" Addressable="true" />
 <Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/changelog.md" Addressable="true" />
 <Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.txt" Addressable="true" />
+<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/arch-simple.png" Addressable="true" />
 		</Assets>
 	</PackageManifest>

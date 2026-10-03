@@ -12,7 +12,7 @@ Um tema escuro inspirado no Arch Linux com cores simples e suaves.
 - [Suporte a Markdown no Visual Studio Code](http://code.visualstudio.com/docs/languages/markdown)
 - [Referência de Sintaxe Markdown](https://help.github.com/articles/markdown-basics/)
 
-![Preview do tema](./screenshot.png)
+![Preview do tema](https://github.com/paulohenriquex/simple-arch/raw/HEAD/screenshot.png)
 
 **Aproveite o tema**
 
